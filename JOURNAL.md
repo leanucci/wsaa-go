@@ -8,3 +8,9 @@ The merge workflow adds each entry before it merges the pull request.
 **Requirement:** Create the initial `wsaa` package. Add the Environment type with the testing and production endpoint URLs. Add the credentials, SOAP fault, and response error types.
 
 **Decisions:** The package name is `wsaa`, at the module root. `Environment.URL()` returns the full LoginCms URL from the wsaa-node README. An unknown Environment value gives an empty URL. The error types are struct types with pointer receivers, so callers can use `errors.As`. The CHANGELOG entries start with `(none)`, because the issue Release field is `none`.
+
+## 2026-11-27 — issue #3: Remove the portfolio mention from README.md
+
+**Requirement:** Remove the mention of leanucci/portfolio from README.md. The README must not point readers at an internal process document.
+
+**Decisions:** The build removes the full "agent cycle" paragraph, because its only purpose is the link. A Go test reads `README.md` and checks both acceptance criteria. The CHANGELOG entry starts with `(none)`, because the issue Release field is `none`.

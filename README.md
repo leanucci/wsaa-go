@@ -7,6 +7,3 @@ A Go port of [wsaa-ruby](https://github.com/leanucci/wsaa-ruby) and
 (TRA), signs it as a CMS (PKCS#7) message with your certificate and private key, sends it to
 WSAA `loginCms`, and returns the TOKEN and the SIGN. Other AFIP web services need these
 credentials.
-
-This project uses the agent cycle. See
-[leanucci/portfolio's APPROACH.md](https://github.com/leanucci/portfolio/blob/main/APPROACH.md).
