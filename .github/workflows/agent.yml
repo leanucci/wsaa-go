@@ -7,11 +7,17 @@ on:
     branches: ["build/**"]
   pull_request:
     types: [opened, synchronize, reopened, ready_for_review, labeled]
+  issues:
+    types: [labeled]
   workflow_dispatch:
     inputs:
       spec:
         description: "Spec file to build, for example specs/002-name.md. Run it on the build branch."
-        required: true
+        required: false
+        type: string
+      issue:
+        description: "Issue number to build, instead of a spec file. Run it on the build branch."
+        required: false
         type: string
 
 permissions:
@@ -26,4 +32,5 @@ jobs:
     uses: leanucci/workflows/.github/workflows/agent.yml@v1
     with:
       spec: ${{ inputs.spec }}
+      issue: ${{ inputs.issue }}
     secrets: inherit
