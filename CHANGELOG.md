@@ -8,6 +8,7 @@ The project uses [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ### Added
 
+- (none) Add the Status, Install, Usage, Endpoints, Errors, and Development sections to `README.md`.
 - (none) Add the `Environment` type with the testing and production WSAA endpoint URLs.
 - (none) Add the `CredentialsError`, `SoapFaultError`, and `ResponseError` error types.
 
